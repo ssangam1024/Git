@@ -51,5 +51,46 @@ Git Workflow Overview:
 
 * Make changes in the Working Tree. 
 * Add changes to the Staging Area (git add). 
-* Commit changes to the Local Repo (git commit)
+* Commit changes to the Local Repo (git commit).
+
+Day - 3
+
+Git Operations:
+
+Untracked files and modified file:
+
+* Untracked files are new files that git does not track yet. They appear when you create a but haven’t added it in Git/ local repo.
+* Modified files are files that Git is tracking , but they have unsaved changes/ not yet staged to commit. 
+
+Adding Files:
+
+* Modified files can be added to staging with git add -u.
+* Untracked files need to be added separately with git add <file>.
+
+Committing Changes:
+
+* After adding files to the staging area, use git commit -m "message" to save changes to the local repository.
+
+Handling Multiple Changes:
+
+* You can add all changes at once using git add -A or git add ., and then commit them.
+
+Ignoring Files: 
+
+* Use a .gitignore file to tell Git which files or folders to ignore (example: bin/* to ignore the bin/ folder).
+
+Moving Changes Back to Working Directory:
+
+* If you want to remove a file from staging, use git reset <file>.
+* To discard all changes, use git reset --hard.
+
+Removing Files:
+
+* Delete a file with rm <file>, then use git add . and git commit to remove it from the repo.
+* Use git clean -fd to remove all untracked files.
+
+
+
+
+
 
