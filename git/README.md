@@ -20,7 +20,8 @@ Any system which satisfies below three points is a Version Control System
 
 Architectures of VCS: 
 
-1. Client Server Architectures: developer works with a central server to store and manage code. this system can be classified into two types. 
+1. Client Server Architectures: 
+        developer works with a central server to store and manage code. this system can be classified into two types. 
 
         a. connected : 1. Clients (developers) must stay continuously connected to the central server.
                        2. Administrators are required to take backups and also to replicate to multi-sites.
@@ -30,10 +31,10 @@ Architectures of VCS:
                          2. Administrators are required to take backups and also to replicate to multi-sites.  
 
 2. Distributed Architectures: 
-                  1. Every developer (client) has a full copy of the project on their computer. which means they can work offline and still have access to the entire history of the code.
-                  2. Backup of the Code is one more node - Since every developer has a full copy, each computer acts as a backup of the code.If one system crashes, the code still exists on others.
-                  3. Other site is one more node - If there’s another server or another developer's system, it also has a full copy of the code. This means code can be shared and recovered from multiple sources.
-                  4. Git is a Distributed Version Control System - Unlike Centralized VCS, where the code is stored on one server, Git saves a full copy of the code on every developer's computer. This makes it more reliable because if the server fails, the code is still safe on other computers, and faster since developers can work offline.
+                  *  Every developer (client) has a full copy of the project on their computer. which means they can work offline and still have access to the entire history of the code.
+                  *  Backup of the Code is one more node - Since every developer has a full copy, each computer acts as a backup of the code.If one system crashes, the code still exists on others.
+                  *  Other site is one more node - If there’s another server or another developer's system, it also has a full copy of the code. This means code can be shared and recovered from multiple sources.
+                  *  Git is a Distributed Version Control System - Unlike Centralized VCS, where the code is stored on one server, Git saves a full copy of the code on every developer's computer. This makes it more reliable because if the server fails, the code is still safe on other computers, and faster since developers can work offline.
 
 Day - 2 
 
