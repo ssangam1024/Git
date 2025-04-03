@@ -1,4 +1,4 @@
-Day 1 : 
+Day - 1 
 
 step 1 - Version Control (VCS) – Developers commit code to a Version Control System (VCS) like Git..
 step 2 - Build/Packaging – The committed code is pulled from VCS, compiled, and packaged into a deployable format.
@@ -12,7 +12,7 @@ Developers commit code to Version Control (VCS) → Code is built and packaged �
 
 Requirements for a system to store code: 
 Any system which satisfies below three points is a Version Control System
-1. Common Server/Application/Sytem to store the code from muliple developers.
+1. Common Server/Application/System to store the code from multiple developers.
 2. Version should be maintained for every change.
 3. Multiple users should be allowed to work on same files/code.
 
@@ -33,4 +33,23 @@ b. disconnected: 1. Clients needed to be connected to servers only for getting t
                   3. Other site is one more node - If there’s another server or another developer's system, it also has a full copy of the code. This means code can be shared and recovered from multiple sources.
                   4. Git is a Distributed Version Control System - Unlike Centralized VCS, where the code is stored on one server, Git saves a full copy of the code on every developer's computer. This makes it more reliable because if the server fails, the code is still safe on other computers, and faster since developers can work offline.
 
-Day 2 :
+Day - 2 
+
+
+Git Operations on a local Node:
+
+Create a repository :(A repository (repo) in Git is a storage location where your project’s files and their entire history of changes are tracked. It can be local (on your computer) or remote (on platforms like GitHub, GitLab, or Bitbucket))
+* To create a Git repository, first, make a new folder and go inside it ( example:  mkdir learninggit ; cd learninggit). Then, run git init to set up Git in that folder, which allows Git to start tracking changes.
+ 
+Understanding Git’s three logical areas:
+
+* Working Tree – Where your actual project files are.
+* Staging Area (Index Area) – Where you prepare changes before committing.
+* Local Repository – Where commits are stored in the .git directory.
+
+Git Workflow Overview:
+
+* Make changes in the Working Tree. 
+* Add changes to the Staging Area (git add). 
+* Commit changes to the Local Repo (git commit)
+
