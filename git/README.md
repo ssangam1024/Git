@@ -92,6 +92,140 @@ Removing Files:
 * Use git clean -fd to remove all untracked files.
 
 
+Day - 4 
+
+Git Basics:
+
+* Commit: When you move changes from the staging area to the local repository, it’s called a commit. Each commit gets a unique ID.
+* HEAD: It’s a pointer that shows which commit you are currently working on. If you want to move to a previous commit, you can use its commit ID
+* Use git log or git log --oneline to see commit history.
+    * Example: git checkout <commit-id> moves the HEAD to that commit.
+    * To return to the latest commit: git checkout master.
+
+Reverting Changes:
+* If you made changes to a file (e.g., 6.txt) and want to undo them: Use git checkout -- 6.txt to revert the changes in the working tree (the file gets reset).
+
+Git Branches:
+
+Default Branch: The default branch in Git is usually called master.
+
+Create a Branch:
+    * Create a new branch called sprint-1 with: git branch sprint-1
+    * Move to the new branch with: git checkout sprint-1
+    * Or create and move to the branch in one step with: git checkout -b sprint-1
+
+1. Working on Branches:
+    * You can commit changes on the sprint-1 branch, like adding features and tests: bash CopyEdit 
+2. Switching Between Branches:
+    * To go back to the master branch: git checkout master
+    * To go back to sprint-1: git checkout sprint-1
+
+Example Workflow:
+* Set up the ecommerce app directory, create files, and commit the changes.
+* Create the branch sprint-1 to work on new features.
+* After making commits for sprint-1, you can switch between master and sprint-1 branches.
+
+Day - 5
+
+Merging: 
+
+Merging means taking changes from one branch and bringing them into another.
+
+There are 2 types of merges:
+
+ Fast-Forward Merge
+
+* Happens when the main branch hasn’t changed.
+* Git just moves the pointer forward—no extra commit is made.
+* Clean and simple.
+Regular Merge
+
+* Happens when both branches have new changes.
+* Git creates a new commit to combine them.
+* Used more often in real-world work.
+
+Merging branch-1 into master
+
+* You switch to the master branch.(we need to switch to master branch before merging because that's the branch we want to apply the changes to. )
+* You merge branch-1 into it.
+* Since master had no changes, Git does a fast-forward merge.
+
+Create a new branch called branch-2
+
+* You start working on new features from the updated master.
+
+Make a quick fix on master
+
+* You go back to master.
+* You add some info to the file.
+* You save and commit the change.
+
+Continue working in branch-2
+* Add new code in branch-2.
+* Save and commit the changes.
+
+Merge branch-2 into master 
+* Go to master.
+* Now Git sees changes in both branches, so it creates a merge commit.
+
+Merge conflicts:
+
+Conflicts happen when:
+* Two branches modify the same line of a file
+* Or a file was modified in one and deleted in another
+
+Can happen during:
+* merge
+* rebase
+* pull
+We need to resolve conflicts manually. 
+
+For viewing difference use “git diff”
+
+Git uses SHA-1 hashing to create commit IDs. Each commit is a hash of:
+* The snapshot of the files
+* Metadata (author, timestamp, message)
+* The parent commit ID
+To inspect a commit:
+
+git cat-file -p <commit-id>
+
+It will show:
+* tree – snapshot of files
+* parent – link to previous commit
+* author, committer
+* message
+
+Day - 6
+
+Remote Repository
+A Remote Repository is a Git project saved on another computer / server(like online platforms). It lets you and your team work together on the same code from different places.
+
+Two Key Actions:
+* Push = Send changes from your computer → to GitHub
+* Pull = Get changes from GitHub → to your computer
+
+Changing Commit History
+Rebase (Advanced):
+* Lets you clean up or reorder your commits
+
+Cherry-Pick:
+* It lets you Copy a specific commit from one branch and apply it to another
+Syntax: 
+git cherry-pick <commit-hash>
+
+Bare Repositories
+* A Bare Repository is a repo with only the .git folder (no actual files to edit).
+* Used on servers or for backup
+Syntax:
+git clone --bare <url>
+
+One Local Repo → Multiple Remotes
+You can link one local project to many remote repositories (like GitHub + GitLab):
+
+
+
+
 
 
 
